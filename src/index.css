@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 .my-container{
-    @apply  lg:w-11/12 mx-auto mb-4 py-1 
+    @apply  lg:w-11/12 mx-auto mb-4 py-1 px-3 lg:px-0
 }
 .active{
     @apply text-xl font-medium text-blue-600
@@ -12,4 +12,16 @@
 }
 .primary-btn{
     @apply  rounded-lg bg-gradient-to-r from-indigo-500 from-0% to-blue-500 to-100% text-white font-semibold text-xl px-3 py-2 hover:bg-gradient-to-tr hover:from-blue-500 hover:to-indigo-500
+}
+.section-title{
+    @apply text-3xl font-bold text-[#1A1919] my-4 text-center
+}
+.sub-title{
+    @apply text-base text-[#757575] font-semibold my-4 text-center
+}
+.card-title{
+    @apply text-[#474747] font-bold text-xl my-2
+}
+.card-sub-title{
+    @apply text-[#A3A3A3] font-semibold text-base
 }
