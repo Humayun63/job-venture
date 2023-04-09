@@ -12,4 +12,4 @@ JobVenture is a job-hunting platform that connects job seekers with employers. O
 * feature 5
 
 ## Live Site Link:
-https://example.com
+https://jobventure.netlify.app/
