@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.my-container{
+    @apply  lg:w-11/12 mx-auto mb-4 py-1 
+}
+.active{
+    @apply text-xl font-medium text-blue-600
+}
+.default{
+    @apply text-xl font-medium hover:text-blue-600
+}
+.primary-btn{
+    @apply  rounded-lg bg-gradient-to-r from-indigo-500 from-0% to-blue-500 to-100% text-white font-semibold text-xl px-3 py-2 hover:bg-gradient-to-tr hover:from-blue-500 hover:to-indigo-500
+}
