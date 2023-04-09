@@ -5,13 +5,15 @@ import Footer from './Footer';
 import Nav from './Nav';
 
 const Layout = () => {
-    return (
-        <>
-          <Nav></Nav>
-          <Outlet></Outlet>
-          <Footer></Footer>
-        </>
-    );
+  return (
+    <>
+      <Nav></Nav>
+      <div className='min-h-[calc(100vh-419px)]'>
+        <Outlet></Outlet>
+      </div>
+      <Footer></Footer>
+    </>
+  );
 };
 
 export default Layout;

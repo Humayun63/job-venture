@@ -28,3 +28,9 @@
 .card-btn{
     @apply rounded-md text-indigo-500 border-indigo-500 px-4 py-2 mr-4 border text-base font-medium my-4
 }
+.footer-text{
+    @apply text-base text-slate-400 leading-6 text-center md:text-left
+}
+.footer-heading{
+    @apply text-white text-xl font-semibold my-4
+}
