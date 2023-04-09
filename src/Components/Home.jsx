@@ -57,9 +57,12 @@ const Home = () => {
                             ))
                         }
                     </div>
-                    <div className='text-center my-8'>
-                        <button className="primary-btn">See All Jobs</button>
-                    </div>
+                    {
+                        jobs.length === 4 &&
+                        <div className='text-center my-8'>
+                            <button className="primary-btn" onClick={() => setJobs(loaderData)}>See All Jobs</button>
+                        </div>
+                    }
                 </section>
             </main>
         </>
