@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "question": "When should you use Context API",
+        "answer": "In React Context API is a feature that allows data to be shared between nested components without props drilling. When you have to pass data from parent to children, then there is an option that passes the data through props. But when the data needs to go in nested components, then that props passing way makes it worse. In that case, one should use the context API feature. "
+    },
+    {
+        "id": 2,
+        "question": "What is Custom hooks?",
+        "answer": "Custom hooks are a feature in React that allows developers to extract common logic into reusable functions. Hooks are basically just plain JavaScript functions that allow for state management in functional components. Custom hooks are named with a 'use' prefix and, like all functions, can accept arguments and return values. Using custom hooks can help follow the DRY (Don't Repeat Yourself) principle because they can be reused across different components."
+    },
+    {
+        "id": 3,
+        "question": "What is useRef?",
+        "answer": "The useRef hook in React returns a mutable reference object with a current property that can be used to store and access mutable values across re-renders of a component without causing unnecessary renders. The current property can be used to store references to DOM elements as well as other values. By using the useRef hook, you can connect directly with the DOM and manipulate it without having to trigger a re-render of the component."
+    },
+    {
+        "id": 4,
+        "question": "What is useMemo?",
+        "answer": ""
+    }
+]
