@@ -15,11 +15,12 @@ import { appliedJobs } from './loaders/loader'
 import JobDetails from './Components/JobDetails'
 import { Toaster } from 'react-hot-toast'
 
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
-    errorElement:<ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
       {
         path: "job/:id",
         element: <JobDetails></JobDetails>,
-        loader: ({params}) => fetch(`/../singleJob/${params.id}.json`),
+        loader: ({ params }) => fetch(`/../singleJob/${params.id}.json`),
       },
       {
         path: "statistics",
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
-    <Toaster></Toaster>
+      <RouterProvider router={router} />
+      <Toaster></Toaster>
   </React.StrictMode>
 )
