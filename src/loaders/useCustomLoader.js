@@ -1,7 +1,7 @@
 import { getFromDB } from "../utilities/fakeDB";
 
 export const useCustomLoader = async () => {
-    const loadJobs = await fetch('jobs.json')
+    const loadJobs = await fetch('/jobs.json')
     const jobs = await loadJobs.json();
 
     const appliedIds = getFromDB();
