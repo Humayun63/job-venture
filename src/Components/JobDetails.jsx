@@ -22,6 +22,7 @@ const JobDetails = () => {
     }
 
     if(pathname.split('/job/')[1] !== id){
+        console.clear()
         return <ErrorPage></ErrorPage>
     }
     return (
