@@ -17,6 +17,6 @@
     {
         "id": 4,
         "question": "What is useMemo?",
-        "answer": ""
+        "answer": "Working on a large and complex calculation that takes a long time to compute and needs to memorize the result of the calculation, the useMemo hook in React comes in handy. It improves the performance of the application by memorizing the computation. It takes a function and an array of dependencies as arguments and returns a memoized value that is only recomputed if the dependencies change. In short, useMemo is a React hook that memorizes the result of a function and only recomputes it when its dependencies change."
     }
 ]
