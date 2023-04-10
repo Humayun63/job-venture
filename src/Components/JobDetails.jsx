@@ -1,12 +1,15 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useLoaderData, useLocation} from 'react-router-dom';
 import Banner from './Banner';
 import { CurrencyDollarIcon, CalendarDaysIcon, PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
 import { toast } from 'react-hot-toast';
 import { saveToDB } from '../utilities/fakeDB';
+import ErrorPage from './ErrorPage';
 
 const JobDetails = () => {
-    const {id,  title,  location, salary, jobDescription, jobResponsibility, educationalRequirements, experiences, phoneNumber, emailAddress} = useLoaderData();
+    const {pathname} = useLocation();
+    const data = useLoaderData();
+    const {id,  title,  location, salary, jobDescription, jobResponsibility, educationalRequirements, experiences, phoneNumber, emailAddress} = data;
 
     const handleApplyBtn = id =>{
         const isExist = localStorage.getItem('applied-jobs') ? JSON.parse(localStorage.getItem('applied-jobs')).includes(id) : '';
@@ -16,6 +19,10 @@ const JobDetails = () => {
             saveToDB(id)
             toast.success('Successfully Applied ❤️')
         }
+    }
+
+    if(pathname.split('/job/')[1] !== id){
+        return <ErrorPage></ErrorPage>
     }
     return (
         <>
