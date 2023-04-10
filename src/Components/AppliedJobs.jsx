@@ -5,7 +5,7 @@ import SingleAppliedJob from './SinlgeAppliedJob';
 
 
 const AppliedJobs = () => {
-    const appliedJobs = useLoaderData()
+    const appliedJobs = useLoaderData()  ? useLoaderData() : []; 
     const [jobs, setJobs] = useState(appliedJobs)
 
     const handleFilterBy = (event) => {

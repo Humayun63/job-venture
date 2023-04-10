@@ -6,7 +6,6 @@ import Chart from './Chart';
 
 const Statistics = () => {
     const data = useLoaderData()
-    console.log(data.marks);
     return (
         <>
             <Banner title="Statistics"></Banner>
