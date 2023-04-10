@@ -13,6 +13,7 @@ import Blog from './Components/Blog'
 import ErrorPage from './Components/ErrorPage'
 import { jobDetailsApi } from './loaders/loader'
 import JobDetails from './Components/JobDetails'
+import { Toaster } from 'react-hot-toast'
 
 const router = createBrowserRouter([
   {
@@ -49,5 +50,6 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
+    <Toaster></Toaster>
   </React.StrictMode>
 )

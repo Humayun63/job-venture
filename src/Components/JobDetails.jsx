@@ -2,9 +2,21 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Banner from './Banner';
 import { CurrencyDollarIcon, CalendarDaysIcon, PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/solid'
+import { toast } from 'react-hot-toast';
+import { saveToDB } from '../utilities/fakeDB';
 
 const JobDetails = () => {
-    const {id, logo, title, company, jobType, location, jobTime, salary, jobDescription, jobResponsibility, educationalRequirements, experiences, phoneNumber, emailAddress} = useLoaderData();
+    const {id,  title,  location, salary, jobDescription, jobResponsibility, educationalRequirements, experiences, phoneNumber, emailAddress} = useLoaderData();
+
+    const handleApplyBtn = id =>{
+        const isExist = localStorage.getItem('applied-jobs') ? JSON.parse(localStorage.getItem('applied-jobs')).includes(id) : '';
+        if(isExist){
+            toast.error('Already Applied 🔥')
+        }else{
+            saveToDB(id)
+            toast.success('Successfully Applied ❤️')
+        }
+    }
     return (
         <>
           <Banner title='Job Details'></Banner>  
@@ -56,7 +68,7 @@ const JobDetails = () => {
                     <span className="text-[#757575] text-base font-medium">{location}</span>
                 </p>
                 <div>
-                    <button className="primary-btn">Apply Now</button>
+                    <button className="primary-btn" onClick={()=> handleApplyBtn(id)}>Apply Now</button>
                 </div>
             </div>
           </article>
