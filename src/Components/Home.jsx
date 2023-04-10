@@ -33,7 +33,7 @@ const Home = () => {
                     <p className="sub-title">Explore thousands of job opportunities with all the information you need. Its your future</p>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-8'>
                         {
-                            cards.map(card => (
+                            cards?.map(card => (
                                 <SingleCard
                                     key={card.id}
                                     card={card}
