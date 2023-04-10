@@ -1,8 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .my-container{
     @apply  lg:w-11/12 mx-auto mb-4 py-1 px-3 lg:px-0
+}
+.nav-design{
+    background-image: url('/src/assets/nav-bg.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 15%;
+    @apply bg-[#f1eeff] my-0 pt-4 lg:pb-12 pb-5
+}
+.nav-design > nav{
+    @apply my-0 
+}
+.my-banner{
+    background-image: url('/src/assets/banner-bg.png');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 15%;
+    @apply bg-[#f1eeff] lg:p-12 p-5
 }
 .active{
     @apply text-xl font-medium text-blue-600
