@@ -11,7 +11,7 @@ import Statistics from './Components/Statistics'
 import AppliedJobs from './Components/AppliedJobs'
 import Blog from './Components/Blog'
 import ErrorPage from './Components/ErrorPage'
-import { jobDetailsApi } from './loaders/loader'
+import { appliedJobs } from './loaders/loader'
 import JobDetails from './Components/JobDetails'
 import { Toaster } from 'react-hot-toast'
 
@@ -37,7 +37,8 @@ const router = createBrowserRouter([
       },
       {
         path: "applied-jobs",
-        element: <AppliedJobs></AppliedJobs>
+        element: <AppliedJobs></AppliedJobs>,
+        loader: appliedJobs
       },
       {
         path: "blog",

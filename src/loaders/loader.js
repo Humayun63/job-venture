@@ -1,9 +1,17 @@
-const jobs = async() =>{
-    const res = await fetch('jobs.json');
-    const data = await res.json();
-    return data;
+import { getFromDB } from "../utilities/fakeDB";
+
+export const appliedJobs = async () =>{
+    const loadJobs = await fetch('/jobs.json')
+    const jobs = await loadJobs.json();
+
+    const appliedIds = getFromDB();
+    const appliedJobs = [];
+
+    for (const id of appliedIds) {
+        const appliedJob = jobs.find(job => job.id === id);
+        if(appliedJob){
+            appliedJobs.push(appliedJob)
+        }
+    }
+    return appliedJobs;
 }
-const jobDetailsApi = id => jobs.find(job => job.id === id);
-
-
-export {jobDetailsApi}

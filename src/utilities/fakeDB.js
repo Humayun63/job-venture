@@ -7,6 +7,13 @@ const saveToDB = id => {
     }
 }
 
+// Get Jobs Id from Local Storage
+const getFromDB = () =>{
+    if(localStorage.getItem('applied-jobs')){
+        return JSON.parse(localStorage.getItem('applied-jobs'))
+    }
+}
 
 
-export {saveToDB}
+
+export {saveToDB, getFromDB}
